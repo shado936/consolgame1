@@ -41,6 +41,7 @@ namespace konsolgeim
             
             for (int c = 0; c < 1;)
             {
+                Console.WriteLine("Управление: W-Вверх, S-Вниз, A-Влево, D-Вправо");
                 for (int i = 0;i < 5; i++)
                 {
                     for (int j = 0;j < 5 ; j++)
@@ -51,6 +52,21 @@ namespace konsolgeim
                 }
                 ConsoleKeyInfo key;
                 key = Console.ReadKey();
+                if (key.Key == ConsoleKey.W || key.Key == ConsoleKey.S || key.Key == ConsoleKey.A || key.Key == ConsoleKey.D)
+                {
+                    for (int i = 0; i < 5; i++)
+                    {
+                        for (int j = 0; j < 5; j++)
+                        {
+                            Console.Write(" " + map[i, j] + " ");
+                        }
+                        Console.WriteLine();
+                    }
+                }
+                else
+                {
+                    Console.Clear();
+                }
                 if (key.Key == ConsoleKey.W)
                 {
                     for (int i = 0; i < 5; i++)
