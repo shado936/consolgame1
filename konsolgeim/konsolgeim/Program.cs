@@ -11,18 +11,30 @@ namespace konsolgeim
         static void Main(string[] args)
         {
             int p = 0;
-            int[,]map = new int[5,5];
+            string[,]map = new string[5,5];
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
                     if (i == 2 && j == 2)
                     {
-                        map[i, j] = 1;
+                        map[i, j] = "1";
                     }
                     else
                     {
-                        map[i, j] = 0;
+                        map[i, j] = "0";
+                    }
+                    if ((i == 4 || i == 0 ) && (j == 3 || j ==1 || j == 3))
+                    {
+                        map[i, j] = "-";
+                    }
+                    if ((i == 4 || i == 0) && (j == 4 || j == 0))
+                    {
+                        map[i, j] = "+";
+                    }
+                    if ((i == 1 || i==3)  && (j == 0|| j == 4)) 
+                    {
+                        map[i, j] = "|";
                     }
                 }
             }
@@ -44,10 +56,10 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == 1 && i > 0)
+                            if (map[i, j] == "1" && i > 0) 
                             {
-                                map[i, j] = 0;
-                                map[i-1, j] = 1;
+                                map[i, j] = "0";
+                                map[i-1, j] = "1";
                                 break;
                             }
                         }
@@ -68,10 +80,10 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == 1 && j > 0)
+                            if (map[i, j] == "1" && j > 0)
                             {
-                                map[i, j] = 0;
-                                map[i, j-1] = 1;
+                                map[i, j] = "0";
+                                map[i, j-1] = "1";
                                 break;
                             }
                         }
@@ -92,10 +104,10 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 4; j++)
                         {
-                            if (map[i, j] == 1)
+                            if (map[i, j] == "1")
                             {
-                                map[i, j] = 0;
-                                map[i, j+1] = 1;
+                                map[i, j] = "0";
+                                map[i, j+1] = "1";
                                 break;
                             }
                         }
@@ -116,10 +128,10 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == 1)
+                            if (map[i, j] == "1")
                             {
-                                map[i, j] = 0;
-                                map[i+1, j] = 1;
+                                map[i, j] = "0";
+                                map[i+1, j] = "1";
                                 p++;
                                 break;
                             }       

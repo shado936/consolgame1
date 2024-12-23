@@ -5,3 +5,10 @@ C:\Users\zenaz\Desktop\--\коды\konsolgeim\konsolgeim\obj\Debug\konsolgeim.cs
 C:\Users\zenaz\Desktop\--\коды\konsolgeim\konsolgeim\obj\Debug\konsolgeim.csproj.CoreCompileInputs.cache
 C:\Users\zenaz\Desktop\--\коды\konsolgeim\konsolgeim\obj\Debug\konsolgeim.exe
 C:\Users\zenaz\Desktop\--\коды\konsolgeim\konsolgeim\obj\Debug\konsolgeim.pdb
+C:\Users\zenaz\Documents\GitHub\consolgame1\konsolgeim\konsolgeim\bin\Debug\konsolgeim.exe.config
+C:\Users\zenaz\Documents\GitHub\consolgame1\konsolgeim\konsolgeim\bin\Debug\konsolgeim.exe
+C:\Users\zenaz\Documents\GitHub\consolgame1\konsolgeim\konsolgeim\bin\Debug\konsolgeim.pdb
+C:\Users\zenaz\Documents\GitHub\consolgame1\konsolgeim\konsolgeim\obj\Debug\konsolgeim.csproj.AssemblyReference.cache
+C:\Users\zenaz\Documents\GitHub\consolgame1\konsolgeim\konsolgeim\obj\Debug\konsolgeim.csproj.CoreCompileInputs.cache
+C:\Users\zenaz\Documents\GitHub\consolgame1\konsolgeim\konsolgeim\obj\Debug\konsolgeim.exe
+C:\Users\zenaz\Documents\GitHub\consolgame1\konsolgeim\konsolgeim\obj\Debug\konsolgeim.pdb

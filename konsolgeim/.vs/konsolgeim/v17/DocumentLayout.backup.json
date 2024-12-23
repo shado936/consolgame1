@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zenaz\\Desktop\\--\\\u043A\u043E\u0434\u044B\\konsolgeim\\",
+  "WorkspaceRootPath": "C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|c:\\users\\zenaz\\desktop\\--\\\u043A\u043E\u0434\u044B\\konsolgeim\\konsolgeim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|c:\\users\\zenaz\\documents\\github\\consolgame1\\konsolgeim\\konsolgeim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|solutionrelative:konsolgeim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\zenaz\\Desktop\\--\\\u043A\u043E\u0434\u044B\\konsolgeim\\konsolgeim\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\konsolgeim\\Program.cs",
               "RelativeDocumentMoniker": "konsolgeim\\Program.cs",
-              "ToolTip": "C:\\Users\\zenaz\\Desktop\\--\\\u043A\u043E\u0434\u044B\\konsolgeim\\konsolgeim\\Program.cs",
+              "ToolTip": "C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\konsolgeim\\Program.cs",
               "RelativeToolTip": "konsolgeim\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvzoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T15:42:10.245Z",
               "EditorCaption": ""
