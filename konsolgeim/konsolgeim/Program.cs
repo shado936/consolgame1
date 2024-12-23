@@ -9,9 +9,17 @@ namespace konsolgeim
     internal class Program
     {
         static void Main(string[] args)
-        {            
+        {
+            Random rnd = new Random();
             int p = 0;
             int F1 = 0;
+            int a = rnd.Next(2, 5);
+            int a2 = a + a * a;
+            int g1 = rnd.Next(1, 4);
+            int g2 = rnd.Next(1, 4);
+            int g3 = g1 + g2;
+            int s1 = 0;
+            int s2 = 0;
             string[,]map = new string[5,5];
             for (int i = 0; i < 5; i++)
             {
@@ -91,41 +99,55 @@ namespace konsolgeim
                         for (int j = 0; j < 5; j++)
                         {
                             if (map[i, j] == "1")
-                                if(F1 !=1)
-                                if (i == 1 && j == 2)
-                                {
-                                        try
+                                if (F1 != 1)
+                                    if (i == 1 && j == 2)
+                                    {
+
+                                        if (s1 != 0 && s2 != 0)
+                                        {
+
+
+                                            try
+                                            {
+                                                Console.Clear();
+                                                Console.WriteLine("F=G*A");
+                                                Console.Write("F=");
+                                                int t = Convert.ToInt32(Console.ReadLine());
+                                                int F = g3 * a2;
+                                                if (t == F)
+                                                {
+                                                    Console.ForegroundColor = ConsoleColor.Green;
+                                                    map[0, 2] = "0";
+                                                    F1++;
+                                                    break;
+                                                }
+                                                else
+                                                {
+                                                    Console.ForegroundColor = ConsoleColor.Red;
+                                                }
+                                            }
+                                            catch { break; }
+                                        }
+                                        else
                                         {
                                             Console.Clear();
-                                            Console.WriteLine("F=G*A");
-                                            Console.Write("F=");
-                                            int t = Convert.ToInt32(Console.ReadLine());
-                                            if (t == 12)
+                                            Console.WriteLine("Вы еще не посмотрели значения переменых для функции");
+                                            Console.ReadKey();
+                                        }
+                                    }
+                                    if (i >= 1)
+                                    {
+                                        if (map[i - 1, j] != "-" && map[i - 1, j] != "|" && map[i - 1, j] != "+" && map[i - 1, j] != "F")
+                                        {
+                                            if (map[i, j] == "1" && i > 0)
                                             {
-                                                Console.ForegroundColor = ConsoleColor.Green;
-                                                map[0, 2] = "0";
-                                                F1++;
+                                                map[i, j] = "0";
+                                                map[i - 1, j] = "1";
                                                 break;
                                             }
-                                            else
-                                            {
-                                                Console.ForegroundColor = ConsoleColor.Red;
-                                            }
                                         }
-                                        catch { break; }
-                                }
-                            if (i >= 1)
-                            {
-                                if (map[i - 1, j] != "-" && map[i - 1, j] != "|" && map[i - 1, j] != "+" && map[i-1,j]!="F")
-                                {
-                                    if (map[i, j] == "1" && i > 0)
-                                    {
-                                        map[i, j] = "0";
-                                        map[i - 1, j] = "1";
-                                        break;
+                                        
                                     }
-                                }
-                            }
                         }
                     }
                     Console.Clear();
@@ -140,7 +162,8 @@ namespace konsolgeim
                                 if (i == 2 && j == 1)
                                 {
                                     Console.Clear();
-                                    Console.WriteLine("A=2+2*2");
+                                    s1++;
+                                    Console.WriteLine($"A={a}+{a}*{a}");
                                     Console.ReadKey();
                                 }
                             if (j >= 1)
@@ -169,7 +192,8 @@ namespace konsolgeim
                             if (i == 2&&j==3)
                             {
                                     Console.Clear();
-                                    Console.WriteLine("G=1+1");
+                                    s2++;
+                                    Console.WriteLine($"G={g1}+{g2}");
                                     Console.ReadKey();
                             }
                             if (j < 4)
