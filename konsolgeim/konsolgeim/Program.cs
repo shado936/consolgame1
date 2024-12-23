@@ -38,16 +38,17 @@ namespace konsolgeim
                     }
                 }
             }
-            for (int i = 0;i < 5; i++)
-            {
-                for (int j = 0;j < 5 ; j++)
-                {
-                    Console.Write(" " + map[i, j]+ " ");
-                }
-                Console.WriteLine();
-            }
+            
             for (int c = 0; c < 1;)
             {
+                for (int i = 0;i < 5; i++)
+                {
+                    for (int j = 0;j < 5 ; j++)
+                    {
+                        Console.Write(" " + map[i, j]+ " ");
+                    }
+                    Console.WriteLine();
+                }
                 ConsoleKeyInfo key;
                 key = Console.ReadKey();
                 if (key.Key == ConsoleKey.W)
@@ -56,23 +57,21 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == "1" && i > 0) 
+                            if (i >= 1)
                             {
-                                map[i, j] = "0";
-                                map[i-1, j] = "1";
-                                break;
+                                if (map[i - 1, j] != "-" && map[i - 1, j] != "|" && map[i - 1, j] != "+")
+                                {
+                                    if (map[i, j] == "1" && i > 0)
+                                    {
+                                        map[i, j] = "0";
+                                        map[i - 1, j] = "1";
+                                        break;
+                                    }
+                                }
                             }
                         }
                     }
                     Console.Clear();
-                    for (int i = 0; i < 5; i++)
-                    {
-                        for (int j = 0; j < 5; j++)
-                        {
-                            Console.Write(" " + map[i, j] + " ");
-                        }
-                        Console.WriteLine();
-                    }
                 }
                 if (key.Key == ConsoleKey.A)
                 {
@@ -80,47 +79,40 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == "1" && j > 0)
+                            if (j >= 1)
                             {
-                                map[i, j] = "0";
-                                map[i, j-1] = "1";
-                                break;
+                                if (map[i, j-1] != "-" && map[i, j - 1] != "|" && map[i, j - 1] != "+")
+                                {
+                                    if (map[i, j] == "1")
+                                    {
+                                        map[i, j] = "0";
+                                        map[i, j - 1] = "1";
+                                        break;
+                                    }
+                                }
                             }
                         }
                     }
                     Console.Clear();
-                    for (int i = 0; i < 5; i++)
-                    {
-                        for (int j = 0; j < 5; j++)
-                        {
-                            Console.Write(" " + map[i, j] + " ");
-                        }
-                        Console.WriteLine();
-                    }
                 }
                 if (key.Key == ConsoleKey.D)
                 {
                     for (int i = 0; i < 5; i++)
                     {
                         for (int j = 0; j < 4; j++)
-                        {
-                            if (map[i, j] == "1")
-                            {
-                                map[i, j] = "0";
-                                map[i, j+1] = "1";
-                                break;
-                            }
+                        {    
+                                if (map[i, j + 1] != "-" && map[i, j + 1] != "|" && map[i, j + 1] != "+")
+                                {
+                                    if (map[i, j] == "1")
+                                    {
+                                        map[i, j] = "0";
+                                        map[i, j + 1] = "1";
+                                        break;
+                                    }
+                                }                          
                         }
                     }
                     Console.Clear();
-                    for (int i = 0; i < 5; i++)
-                    {
-                        for (int j = 0; j < 5; j++)
-                        {
-                            Console.Write(" " + map[i, j] + " ");
-                        }
-                        Console.WriteLine();
-                    }
                 } 
                 if (key.Key == ConsoleKey.S)
                 {
@@ -128,13 +120,16 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == "1")
+                            if (map[i + 1, j] != "-" && map[i + 1, j] != "|" && map[i + 1, j] != "+")
                             {
-                                map[i, j] = "0";
-                                map[i+1, j] = "1";
-                                p++;
-                                break;
-                            }       
+                                if (map[i, j] == "1")
+                                {
+                                    map[i, j] = "0";
+                                    map[i + 1, j] = "1";
+                                    p++;
+                                    break;
+                                }
+                            }
                         }
                         if(p == 1)
                         {
@@ -144,14 +139,6 @@ namespace konsolgeim
                             
                     }
                     Console.Clear();
-                    for (int i = 0; i < 5; i++)
-                    {
-                        for (int j = 0; j < 5; j++)
-                        {
-                            Console.Write(" " + map[i, j] + " ");
-                        }
-                        Console.WriteLine();
-                    }
                 }
             }
         }
