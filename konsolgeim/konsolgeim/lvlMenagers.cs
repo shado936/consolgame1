@@ -39,6 +39,14 @@ namespace konsolgeim
                     {
                         map[i, j] = "|";
                     }
+                    if (i == 0 && j == 2)
+                    {
+                        map[i, j] = "F";
+                    }
+                    if (i == 2 && j == 4)
+                    {
+                        map[i, j] = "U"; 
+                    }
 
                 }
             }
@@ -99,15 +107,20 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (j >= 1)
+                            if (map[i, j] == "x") 
                             {
-                                if (map[i, j - 1] != "-" && map[i, j - 1] != "|" && map[i, j - 1] != "+")
+                                if (i == 2 && j == 0)
                                 {
-                                    if (map[i, j] == "x")
+                                    lvls.lvl2V1();
+                                }
+                                if (j >= 1)
+                                {
+
+                                    if (map[i, j - 1] != "-" && map[i, j - 1] != "|" && map[i, j - 1] != "+")
                                     {
-                                        map[i, j] = "0";
-                                        map[i, j - 1] = "x";
-                                        break;
+                                            map[i, j] = "0";
+                                            map[i, j - 1] = "x";
+                                            break;
                                     }
                                 }
                             }
@@ -466,5 +479,10 @@ namespace konsolgeim
                 }
             }
         }
-    }
+        public void lvl2V1()
+        {
+            Console.WriteLine("lol");
+            Console.ReadKey();
+        }
+    }  
 }
