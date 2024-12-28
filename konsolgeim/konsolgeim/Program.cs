@@ -79,6 +79,28 @@ namespace konsolgeim
                             break;
 
                         }
+                    case ConsoleKey.Escape:
+                        {
+                            if (g == 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+                                Console.WriteLine(" <start> settings  exit");
+                            }
+                            if (g == 1)
+                            {
+                                Console.Clear();
+                                Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+                                Console.WriteLine("  start <settings> exit");
+                            }
+                            if (g == 2)
+                            {
+                                Console.Clear();
+                                Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+                                Console.WriteLine("  start  settings <exit>");
+                            }
+                            break;
+                        }
                 }
                 if (g == 0)
                 {
@@ -159,6 +181,28 @@ namespace konsolgeim
 
                             break;
 
+                        }
+                    case ConsoleKey.Escape:
+                        {
+                            if (g == 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine(" [W-вверх] [S-вниз] \n");
+                                Console.WriteLine("  [music] \n <defolt> \n   morg \n \n   exit ");
+                            }
+                            if (g == 1)
+                            {
+                                Console.Clear();
+                                Console.WriteLine(" [W-вверх] [S-вниз] \n");
+                                Console.WriteLine("  [music] \n  defolt \n  <morg> \n \n   exit ");
+                            }
+                            if (g == 2)
+                            {
+                                Console.Clear();
+                                Console.WriteLine(" [W-вверх] [S-вниз] \n");
+                                Console.WriteLine("  [music] \n  defolt \n   morg \n \n  <exit> ");
+                            }
+                            break ;
                         }
                 }
                 if (g == 0)

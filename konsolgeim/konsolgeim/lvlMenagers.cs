@@ -213,7 +213,27 @@ namespace konsolgeim
                 if (key.Key == ConsoleKey.Escape)
                 {
                     Program program = new Program();
-                    program.menu();   
+                    Console.Clear();
+                    Console.WriteLine("Вы уверены что хотитеВыйти? прогресс не сохраниться \n[Y-да] [N-нет]");
+                    for (int menu =0;menu<1 ; )
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Вы уверены что хотитеВыйти? прогресс не сохраниться \n[Y-да] [N-нет]");
+                        ConsoleKeyInfo keyV2 = Console.ReadKey();
+                        switch (keyV2.Key)
+                        {
+                            case ConsoleKey.Y:
+                                {
+                                    program.menu();
+                                    break;
+                                }
+                            case ConsoleKey.N:
+                                {
+                                    menu++;
+                                    break;
+                                }
+                        }
+                    }
                 }
                 if (key.Key == ConsoleKey.W)
                 {
@@ -491,19 +511,25 @@ namespace konsolgeim
                 {
                     Program program = new Program();
                     Console.Clear();
-                    Console.WriteLine("Вы уверены что хотите выйти? прогресс не сохраниться \n[Y-да] [N-нет]");
-                    ConsoleKeyInfo keyV2 = Console.ReadKey();
-                    switch (keyV2.Key)
+                    Console.WriteLine("Вы уверены что хотитеВыйти? прогресс не сохраниться \n[Y-да] [N-нет]");
+                    for (int menu = 0; menu < 1;)
                     {
-                        case ConsoleKey.Y:
-                            {
-                                program.menu();
-                                break;
-                            }
+                        Console.Clear();
+                        Console.WriteLine("Вы уверены что хотитеВыйти? прогресс не сохраниться \n[Y-да] [N-нет]");
+                        ConsoleKeyInfo keyV2 = Console.ReadKey();
+                        switch (keyV2.Key)
+                        {
+                            case ConsoleKey.Y:
+                                {
+                                    program.menu();
+                                    break;
+                                }
                             case ConsoleKey.N:
-                            {
-                                break;
-                            }
+                                {
+                                    menu++;
+                                    break;
+                                }
+                        }
                     }
                 }
                 if (key.Key == ConsoleKey.W)
@@ -727,7 +753,27 @@ namespace konsolgeim
                 if (key.Key == ConsoleKey.Escape)
                 {
                     Program program = new Program();
-                    program.menu();
+                    Console.Clear();
+                    Console.WriteLine("Вы уверены что хотитеВыйти? прогресс не сохраниться \n[Y-да] [N-нет]");
+                    for (int menu = 0; menu < 1;)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Вы уверены что хотитеВыйти? прогресс не сохраниться \n[Y-да] [N-нет]");
+                        ConsoleKeyInfo keyV2 = Console.ReadKey();
+                        switch (keyV2.Key)
+                        {
+                            case ConsoleKey.Y:
+                                {
+                                    program.menu();
+                                    break;
+                                }
+                            case ConsoleKey.N:
+                                {
+                                    menu++;
+                                    break;
+                                }
+                        }
+                    }
                 }
                 if (key.Key == ConsoleKey.W)
                 {
