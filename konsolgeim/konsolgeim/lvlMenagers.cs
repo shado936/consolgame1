@@ -31,10 +31,6 @@ namespace konsolgeim
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
             int p = 0;
-            //if (Q == 2)
-            //{
-            //    F2 = 1;
-            //}
             double G = 5, U = 30, K = 15, C = 0.5;
             double F = (G + U - K) * C;
             lvlMenagers lvls = new lvlMenagers();
@@ -188,7 +184,7 @@ namespace konsolgeim
 
             for (int c = 0; c < 1;)
             {
-                Console.WriteLine("Управление: W-Вверх, S-Вниз, A-Влево, D-Вправо");
+                Console.WriteLine("Управление: [W-Вверх] [S-Вниз] [A-Влево] [D-Вправо] [ESC-меню]");
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 5; j++)
@@ -199,7 +195,7 @@ namespace konsolgeim
                 }
                 ConsoleKeyInfo key;
                 key = Console.ReadKey();
-                if (key.Key == ConsoleKey.W || key.Key == ConsoleKey.S || key.Key == ConsoleKey.A || key.Key == ConsoleKey.D)
+                if (key.Key == ConsoleKey.W || key.Key == ConsoleKey.S || key.Key == ConsoleKey.A || key.Key == ConsoleKey.D || key.Key == ConsoleKey.Escape)
                 {
                     for (int i = 0; i < 5; i++)
                     {
@@ -213,6 +209,11 @@ namespace konsolgeim
                 else
                 {
                     Console.Clear();
+                }
+                if (key.Key == ConsoleKey.Escape)
+                {
+                    Program program = new Program();
+                    program.menu();   
                 }
                 if (key.Key == ConsoleKey.W)
                 {
@@ -460,7 +461,7 @@ namespace konsolgeim
 
             for (int c = 0; c < 1;)
             {
-                Console.WriteLine("Управление: W-Вверх, S-Вниз, A-Влево, D-Вправо");
+                Console.WriteLine("Управление: [W-Вверх] [S-Вниз] [A-Влево] [D-Вправо] [ESC-меню]");
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 5; j++)
@@ -470,8 +471,8 @@ namespace konsolgeim
                     Console.WriteLine();
                 }
                 ConsoleKeyInfo key;
-                key = Console.ReadKey();               
-                if (key.Key == ConsoleKey.W || key.Key == ConsoleKey.S || key.Key == ConsoleKey.A || key.Key == ConsoleKey.D)
+                key = Console.ReadKey();
+                if (key.Key == ConsoleKey.W || key.Key == ConsoleKey.S || key.Key == ConsoleKey.A || key.Key == ConsoleKey.D || key.Key == ConsoleKey.Escape)
                 {
                     for (int i = 0; i < 5; i++)
                     {
@@ -485,6 +486,25 @@ namespace konsolgeim
                 else
                 {
                     Console.Clear();
+                }
+                if (key.Key == ConsoleKey.Escape)
+                {
+                    Program program = new Program();
+                    Console.Clear();
+                    Console.WriteLine("Вы уверены что хотите выйти? прогресс не сохраниться \n[Y-да] [N-нет]");
+                    ConsoleKeyInfo keyV2 = Console.ReadKey();
+                    switch (keyV2.Key)
+                    {
+                        case ConsoleKey.Y:
+                            {
+                                program.menu();
+                                break;
+                            }
+                            case ConsoleKey.N:
+                            {
+                                break;
+                            }
+                    }
                 }
                 if (key.Key == ConsoleKey.W)
                 {
@@ -678,7 +698,7 @@ namespace konsolgeim
 
             for (int c = 0; c < 1;)
             {
-                Console.WriteLine("Управление: W-Вверх, S-Вниз, A-Влево, D-Вправо");
+                Console.WriteLine("Управление: [W-Вверх] [S-Вниз] [A-Влево] [D-Вправо] [ESC-меню]");
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 5; j++)
@@ -689,7 +709,7 @@ namespace konsolgeim
                 }
                 ConsoleKeyInfo key;
                 key = Console.ReadKey();
-                if (key.Key == ConsoleKey.W || key.Key == ConsoleKey.S || key.Key == ConsoleKey.A || key.Key == ConsoleKey.D)
+                if (key.Key == ConsoleKey.W || key.Key == ConsoleKey.S || key.Key == ConsoleKey.A || key.Key == ConsoleKey.D || key.Key == ConsoleKey.Escape)
                 {
                     for (int i = 0; i < 5; i++)
                     {
@@ -703,6 +723,11 @@ namespace konsolgeim
                 else
                 {
                     Console.Clear();
+                }
+                if (key.Key == ConsoleKey.Escape)
+                {
+                    Program program = new Program();
+                    program.menu();
                 }
                 if (key.Key == ConsoleKey.W)
                 {
