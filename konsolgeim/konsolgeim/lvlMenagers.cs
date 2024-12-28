@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,23 @@ namespace konsolgeim
     {
         static int F1=0;
         static int F2=0;
+        public void playMusic(int n)
+        {
+            SoundPlayer player = new SoundPlayer();
+            if (n == 1)
+            {
+                player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\music.wav";
+            }
+            if (n == 2)
+            {
+                player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\morg.wav";
+            }
+            
+            player.PlayLooping();
+
+
+        }
+
         public void lvl2MainK(int Q)
         {
             Console.Clear();
