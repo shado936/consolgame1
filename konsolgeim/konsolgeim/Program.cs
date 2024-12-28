@@ -131,7 +131,7 @@ namespace konsolgeim
             int g = 0;
             ConsoleKeyInfo key;
             Console.WriteLine(" [W-вверх] [S-вниз] \n");
-            Console.WriteLine("  [music] \n <defolt> \n   morg \n \n   exit ");
+            Console.WriteLine("  [music] \n <defolt> \n  morg \n  jingle bells \n\n  exit ");
             for (; ; )
             {
                 key = Console.ReadKey();
@@ -139,7 +139,7 @@ namespace konsolgeim
                 {
                     case ConsoleKey.S:
                         {
-                            if (g != 2)
+                            if (g != 3)
                             {
                                 g++;
                             }
@@ -157,7 +157,7 @@ namespace konsolgeim
                             }
                             else
                             {
-                                g = 2;
+                                g = 3;
                             }
                             break;
 
@@ -176,6 +176,11 @@ namespace konsolgeim
                             }
                             if (g == 2)
                             {
+                                n = 3;
+                                lvls.playMusic(n);
+                            }
+                            if (g == 3)
+                            {
                                 pr.menu();
                             }
 
@@ -188,19 +193,25 @@ namespace konsolgeim
                             {
                                 Console.Clear();
                                 Console.WriteLine(" [W-вверх] [S-вниз] \n");
-                                Console.WriteLine("  [music] \n <defolt> \n   morg \n \n   exit ");
+                                Console.WriteLine("  [music] \n <defolt> \n  morg \n  jingle bells \n\n  exit ");
                             }
                             if (g == 1)
                             {
                                 Console.Clear();
                                 Console.WriteLine(" [W-вверх] [S-вниз] \n");
-                                Console.WriteLine("  [music] \n  defolt \n  <morg> \n \n   exit ");
+                                Console.WriteLine("  [music] \n  defolt \n <morg> \n  jingle bells \n\n  exit ");
                             }
                             if (g == 2)
                             {
                                 Console.Clear();
                                 Console.WriteLine(" [W-вверх] [S-вниз] \n");
-                                Console.WriteLine("  [music] \n  defolt \n   morg \n \n  <exit> ");
+                                Console.WriteLine("  [music] \n  defolt \n  morg \n <jingle bells> \n\n  exit ");
+                            }
+                            if (g == 3)
+                            {
+                                Console.Clear();
+                                Console.WriteLine(" [W-вверх] [S-вниз] \n");
+                                Console.WriteLine("  [music] \n  defolt \n  morg \n  jingle bells \n\n <exit> ");
                             }
                             break ;
                         }
@@ -209,19 +220,25 @@ namespace konsolgeim
                 {
                     Console.Clear();
                     Console.WriteLine(" [W-вверх] [S-вниз] \n");
-                    Console.WriteLine("  [music] \n <defolt> \n   morg \n \n   exit ");
+                    Console.WriteLine("  [music] \n <defolt> \n  morg \n  jingle bells \n\n  exit ");
                 }
                 if (g == 1)
                 {
                     Console.Clear();
                     Console.WriteLine(" [W-вверх] [S-вниз] \n");
-                    Console.WriteLine("  [music] \n  defolt \n  <morg> \n \n   exit ");
+                    Console.WriteLine("  [music] \n  defolt \n <morg> \n  jingle bells \n\n  exit ");
                 }
                 if (g == 2)
                 {
                     Console.Clear();
                     Console.WriteLine(" [W-вверх] [S-вниз] \n");
-                    Console.WriteLine("  [music] \n  defolt \n   morg \n \n  <exit> ");
+                    Console.WriteLine("  [music] \n  defolt \n  morg \n <jingle bells> \n\n  exit ");
+                }
+                if (g == 3)
+                {
+                    Console.Clear();
+                    Console.WriteLine(" [W-вверх] [S-вниз] \n");
+                    Console.WriteLine("  [music] \n  defolt \n  morg \n  jingle bells \n\n <exit> ");
                 }
             }
         }

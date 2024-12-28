@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\konsolgeim\\lvlmenagers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|solutionrelative:konsolgeim\\lvlmenagers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\konsolgeim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|solutionrelative:konsolgeim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|c:\\users\\zenaz\\documents\\github\\consolgame1\\konsolgeim\\konsolgeim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|solutionrelative:konsolgeim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|c:\\users\\zenaz\\documents\\github\\consolgame1\\konsolgeim\\konsolgeim\\lvlmenagers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{534DF444-A562-4DF3-A43F-80FCB650175D}|konsolgeim\\konsolgeim.csproj|solutionrelative:konsolgeim\\lvlmenagers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,26 +26,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "lvlMenagers.cs",
               "DocumentMoniker": "C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\konsolgeim\\lvlMenagers.cs",
               "RelativeDocumentMoniker": "konsolgeim\\lvlMenagers.cs",
-              "ToolTip": "C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\konsolgeim\\lvlMenagers.cs*",
-              "RelativeToolTip": "konsolgeim\\lvlMenagers.cs*",
-              "ViewState": "AgIAAMoAAAAAAAAAAAAowNgAAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\konsolgeim\\lvlMenagers.cs",
+              "RelativeToolTip": "konsolgeim\\lvlMenagers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T05:54:08.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\konsolgeim\\Program.cs",
               "RelativeDocumentMoniker": "konsolgeim\\Program.cs",
               "ToolTip": "C:\\Users\\zenaz\\Documents\\GitHub\\consolgame1\\konsolgeim\\konsolgeim\\Program.cs",
               "RelativeToolTip": "konsolgeim\\Program.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAAAMwAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAALYAAAAAAAAAAAAAAIUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T15:42:10.245Z",
               "EditorCaption": ""
