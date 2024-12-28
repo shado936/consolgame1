@@ -11,10 +11,18 @@ namespace konsolgeim
     {
         static int F1=0;
         static int F2=0;
-        public void playMusic()
+        public void playMusic(int n)
         {
             SoundPlayer player = new SoundPlayer();
-            player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\music.wav";
+            if (n == 1)
+            {
+                player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\music.wav";
+            }
+            if (n == 2)
+            {
+                player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\morg.wav";
+            }
+
             player.PlayLooping();
         }
 
@@ -39,11 +47,11 @@ namespace konsolgeim
                     {
                         if (i == 4 && j == 2)
                         {
-                            map[i, j] = "☺";
+                            map[i, j] = "X";
                         }
                         else
                         {
-                            map[i, j] = " ";
+                            map[i, j] = "O";
                         }
                         if ((i == 4 || i == 0) && (j == 3 || j == 1 || j == 3))
                         {
@@ -77,11 +85,11 @@ namespace konsolgeim
                     {
                         if (i == 2 && j == 0)
                         {
-                            map[i, j] = "☺";
+                            map[i, j] = "X";
                         }
                         else
                         {
-                            map[i, j] = " ";
+                            map[i, j] = "O";
                         }
                         if ((i == 4 || i == 0) && (j == 3 || j == 1 || j == 3))
                         {
@@ -116,11 +124,11 @@ namespace konsolgeim
                     {
                         if (i == 2 && j == 0)
                         {
-                            map[i, j] = "☺";
+                            map[i, j] = "X";
                         }
                         else
                         {
-                            map[i, j] = " ";
+                            map[i, j] = "O";
                         }
                         if ((i == 4 || i == 0) && (j == 3 || j == 1 || j == 3))
                         {
@@ -151,11 +159,11 @@ namespace konsolgeim
                     {
                         if (i == 4 && j == 2)
                         {
-                            map[i, j] = "☺";
+                            map[i, j] = "X";
                         }
                         else
                         {
-                            map[i, j] = " ";
+                            map[i, j] = "O";
                         }
                         if ((i == 4 || i == 0) && (j == 3 || j == 1 || j == 3))
                         {
@@ -214,12 +222,12 @@ namespace konsolgeim
                         {
                             if (i >= 1)
                             {
-                                if (map[i, j] == "☺")
+                                if (map[i, j] == "X")
                                 {
                                     if (map[i - 1, j] != "-" && map[i - 1, j] != "|" && map[i - 1, j] != "+" && map[i - 1, j] != "F")
                                     {
-                                        map[i, j] = " ";
-                                        map[i - 1, j] = "☺";
+                                        map[i, j] = "O";
+                                        map[i - 1, j] = "X";
                                         break;
                                     }
                                     if (map[i - 1, j] == "F")
@@ -236,7 +244,7 @@ namespace konsolgeim
                                                 if (t == F)
                                                 {
                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                    map[0, 2] = " ";
+                                                    map[0, 2] = "O";
                                                     F2=1;
                                                     break;
                                                 }
@@ -261,7 +269,7 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == "☺")
+                            if (map[i, j] == "X")
                             {
                                 if (i == 2 && j == 0)
                                 {
@@ -273,8 +281,8 @@ namespace konsolgeim
 
                                     if (map[i, j - 1] != "-" && map[i, j - 1] != "|" && map[i, j - 1] != "+")
                                     {
-                                        map[i, j] = " ";
-                                        map[i, j - 1] = "☺";
+                                        map[i, j] = "O";
+                                        map[i, j - 1] = "X";
                                         break;
                                     }
                                 }
@@ -290,7 +298,7 @@ namespace konsolgeim
                         {   
                             if (map[i, j + 1] != "-" && map[i, j + 1] != "|" && map[i, j + 1] != "+" )
                             {
-                                if (map[i, j] == "☺")
+                                if (map[i, j] == "X")
                                 {
                                     if (i == 2 && j == 3)
                                     {
@@ -300,8 +308,8 @@ namespace konsolgeim
                                         Console.ReadKey();
                                         break;
                                     }
-                                    map[i, j] = " ";
-                                    map[i, j + 1] = "☺";
+                                    map[i, j] = "O";
+                                    map[i, j + 1] = "X";
                                     break;
                                 }
                             }
@@ -315,7 +323,7 @@ namespace konsolgeim
                         for (int j = 0; j < 5; j++)
                         {
 
-                            if (map[i, j] == "☺")
+                            if (map[i, j] == "X")
                             {
                                 if (i == 4 && j == 2)
                                 {
@@ -329,11 +337,11 @@ namespace konsolgeim
                             {
                                 if (map[i + 1, j] != "-" && map[i + 1, j] != "|" && map[i + 1, j] != "+")
                                 {
-                                    if (map[i, j] == "☺")
+                                    if (map[i, j] == "X")
                                     {
 
-                                        map[i, j] = " ";
-                                        map[i + 1, j] = "☺";
+                                        map[i, j] = "O";
+                                        map[i + 1, j] = "X";
                                         p++;
                                         break;
 
@@ -371,11 +379,11 @@ namespace konsolgeim
                 {
                     if (i == 2 && j == 2)
                     {
-                        map[i, j] = "☺";
+                        map[i, j] = "X";
                     }
                     else
                     {
-                        map[i, j] = " ";
+                        map[i, j] = "O";
                     }
                     if ((i == 4 || i == 0) && (j == 3 || j == 1 || j == 3))
                     {
@@ -416,11 +424,11 @@ namespace konsolgeim
                     {
                         if (i == 0 && j == 2)
                         {
-                            map[i, j] = "☺";
+                            map[i, j] = "X";
                         }
                         else
                         {
-                            map[i, j] = " ";
+                            map[i, j] = "O";
                         }
                         if ((i == 4 || i == 0) && (j == 3 || j == 1 || j == 3))
                         {
@@ -484,7 +492,7 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == "☺")
+                            if (map[i, j] == "X")
                             {
                                 if (i == 0 && j == 2)
                                 {
@@ -508,7 +516,7 @@ namespace konsolgeim
                                             if (t == F)
                                             {
                                                 Console.ForegroundColor = ConsoleColor.Green;
-                                                map[0, 2] = " ";
+                                                map[0, 2] = "O";
                                                 F1=1;
                                                 break;
                                             }
@@ -526,10 +534,10 @@ namespace konsolgeim
                             {
                                 if (map[i - 1, j] != "-" && map[i - 1, j] != "|" && map[i - 1, j] != "+" && map[i - 1, j] != "F")
                                 {
-                                    if (map[i, j] ==    "☺" && i > 0)
+                                    if (map[i, j] ==    "X" && i > 0)
                                     {
-                                        map[i, j] = " ";
-                                        map[i - 1, j] = "☺";
+                                        map[i, j] = "O";
+                                        map[i - 1, j] = "X";
                                         break;
                                     }
                                 }
@@ -545,7 +553,7 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == "☺")
+                            if (map[i, j] == "X")
                                 if (i == 2 && j == 1)
                                 {
                                     Console.Clear();
@@ -556,10 +564,10 @@ namespace konsolgeim
                             {
                                 if (map[i, j - 1] != "-" && map[i, j - 1] != "|" && map[i, j - 1] != "+" && map[i, j - 1] != "A")
                                 {
-                                    if (map[i, j] == "☺")
+                                    if (map[i, j] == "X")
                                     {
-                                        map[i, j] = " ";
-                                        map[i, j - 1] = "☺";
+                                        map[i, j] = "O";
+                                        map[i, j - 1] = "X";
                                         break;
                                     }
                                 }
@@ -573,7 +581,7 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == "☺")
+                            if (map[i, j] == "X")
                                 if (i == 2 && j == 3)
                                 {
                                     Console.Clear();
@@ -584,10 +592,10 @@ namespace konsolgeim
                             {
                                 if (map[i, j + 1] != "-" && map[i, j + 1] != "|" && map[i, j + 1] != "+" && map[i, j + 1] != "G")
                                 {
-                                    if (map[i, j] == "☺")
+                                    if (map[i, j] == "X")
                                     {
-                                        map[i, j] = " ";
-                                        map[i, j + 1] = "☺";
+                                        map[i, j] = "O";
+                                        map[i, j + 1] = "X";
                                         break;
                                     }
                                 }
@@ -603,10 +611,10 @@ namespace konsolgeim
                         {
                             if (map[i + 1, j] != "-" && map[i + 1, j] != "|" && map[i + 1, j] != "+")
                             {
-                                if (map[i, j] == "☺")
+                                if (map[i, j] == "X")
                                 {
-                                    map[i, j] = " ";
-                                    map[i + 1, j] = "☺";
+                                    map[i, j] = "O";
+                                    map[i + 1, j] = "X";
                                     p++;
                                     break;
                                 }
@@ -634,11 +642,11 @@ namespace konsolgeim
                 {
                     if (i == 2 && j == 4)
                     {
-                        map[i, j] = "☺";
+                        map[i, j] = "X";
                     }
                     else
                     {
-                        map[i, j] = " ";
+                        map[i, j] = "O";
                     }
                     if ((i == 4 || i == 0) && (j == 3 || j == 1 || j == 3))
                     {
@@ -706,7 +714,7 @@ namespace konsolgeim
                             {
                                 if (map[i - 1, j] != "-" && map[i - 1, j] != "|" && map[i - 1, j] != "+")
                                 {
-                                    if (map[i, j] == "☺" && i > 0)
+                                    if (map[i, j] == "X" && i > 0)
                                     {
                                         if(map[i - 1, j] == "K")
                                         {
@@ -718,8 +726,8 @@ namespace konsolgeim
                                         }
                                         else
                                         {
-                                        map[i, j] = " ";
-                                        map[i - 1, j] = "☺";
+                                        map[i, j] = "O";
+                                        map[i - 1, j] = "X";
                                         break;
                                         }   
                                     }
@@ -739,7 +747,7 @@ namespace konsolgeim
                             {
                                 if (map[i, j - 1] != "-" && map[i, j - 1] != "|" && map[i, j - 1] != "+")
                                 {
-                                    if (map[i, j] == "☺")
+                                    if (map[i, j] == "X")
                                     {
                                         if(map[i, j - 1] == "C")
                                         {
@@ -751,8 +759,8 @@ namespace konsolgeim
                                         }
                                         else
                                         {
-                                            map[i, j] = " ";
-                                            map[i, j - 1] = "☺";
+                                            map[i, j] = "O";
+                                            map[i, j - 1] = "X";
                                             break;
                                         } 
                                     }
@@ -768,7 +776,7 @@ namespace konsolgeim
                     {
                         for (int j = 0; j < 5; j++)
                         {
-                            if (map[i, j] == "☺")
+                            if (map[i, j] == "X")
                             {
                                 
                                 if (i == 2 && j == 4)
@@ -786,8 +794,8 @@ namespace konsolgeim
                                 }
                                 if (map[i, j + 1] != "-" && map[i, j + 1] != "|" && map[i, j + 1] != "+")
                                 {
-                                    map[i, j] = " ";
-                                    map[i, j + 1] = "☺";
+                                    map[i, j] = "O";
+                                    map[i, j + 1] = "X";
                                     break;
                                 }
                                     
@@ -804,10 +812,10 @@ namespace konsolgeim
                         {
                             if (map[i + 1, j] != "-" && map[i + 1, j] != "|" && map[i + 1, j] != "+")
                             {
-                                if (map[i, j] == "☺")
+                                if (map[i, j] == "X")
                                 {
-                                    map[i, j] = " ";
-                                    map[i + 1, j] = "☺";
+                                    map[i, j] = "O";
+                                    map[i + 1, j] = "X";
                                     p++;
                                     break;
                                 }
