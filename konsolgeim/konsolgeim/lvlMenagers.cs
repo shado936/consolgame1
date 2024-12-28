@@ -11,21 +11,11 @@ namespace konsolgeim
     {
         static int F1=0;
         static int F2=0;
-        public void playMusic(int n)
+        public void playMusic()
         {
             SoundPlayer player = new SoundPlayer();
-            if (n == 1)
-            {
-                player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\music.wav";
-            }
-            if (n == 2)
-            {
-                player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\morg.wav";
-            }
-            
+            player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\music.wav";
             player.PlayLooping();
-
-
         }
 
         public void lvl2MainK(int Q)
