@@ -20,6 +20,8 @@ namespace konsolgeim
         }
         public void menu()
         {
+            Console.ResetColor();
+            lvls.reset();
             Console.Clear();
             int g = 0;
             if (musicstart == 0)
@@ -28,7 +30,7 @@ namespace konsolgeim
                 musicstart = 1;
             }   
             ConsoleKeyInfo key;
-            Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+            Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]\n");
             Console.WriteLine(" <start> settings  exit");
             for (; ; )
             {
@@ -84,19 +86,19 @@ namespace konsolgeim
                             if (g == 0)
                             {
                                 Console.Clear();
-                                Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+                                Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]\n");
                                 Console.WriteLine(" <start> settings  exit");
                             }
                             if (g == 1)
                             {
                                 Console.Clear();
-                                Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+                                Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]\n");
                                 Console.WriteLine("  start <settings> exit");
                             }
                             if (g == 2)
                             {
                                 Console.Clear();
-                                Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+                                Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]\n");
                                 Console.WriteLine("  start  settings <exit>");
                             }
                             break;
@@ -105,19 +107,19 @@ namespace konsolgeim
                 if (g == 0)
                 {
                     Console.Clear();
-                    Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+                    Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]\n");
                     Console.WriteLine(" <start> settings  exit");
                 }
                 if (g == 1)
                 {
                     Console.Clear();
-                    Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+                    Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]\n");
                     Console.WriteLine("  start <settings> exit");
                 }
                 if (g == 2)
                 {
                     Console.Clear();
-                    Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]");
+                    Console.WriteLine(" [A-влево] [D-вправо] [Enter-выбрать]\n");
                     Console.WriteLine("  start  settings <exit>");
                 }
             }
